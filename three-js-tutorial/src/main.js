@@ -61,3 +61,12 @@ function addStar() {
 
 Array(200).fill().forEach(addStar);
 
+// Moon
+const moon = new THREE.Mesh(
+  new THREE.SphereGeometry(3, 32, 32),
+  new THREE.MeshStandardMaterial({
+    map: new THREE.TextureLoader().load('moon.jpg'),
+    normalMap: new THREE.TextureLoader().load('normal.jpg')
+  })
+);
+scene.add(moon);
